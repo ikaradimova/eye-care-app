@@ -2,38 +2,37 @@
 @section("content")
 
     <section>
-        <h2>New Recipe</h2>
+        <h2>Нова рецепта</h2>
 
         {!! Form::open(['action' => 'RecipesController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-        <div class="form-group">
-            {{Form::label('title','Title')}}
-            {{Form::text('title', '',['placeholder' => 'This is the recipe name' ])}}
+        <div class="form-group-custom">
+            {{Form::label('title','Заглавие')}}
+            {{Form::text('title', '',['placeholder' => 'Заглавие на рецептата' ])}}
         </div>
-        <div class="form-group">
-            {{Form::label('preptime','Preparation Time')}}
-            {{Form::text('preptime', '',['placeholder' => 'The time it would take for the whole recipe to be completed, doesnt have to be exact' ])}}
+        <div class="form-group-custom">
+            {{Form::label('preptime','Време за подготовка')}}
+            {{Form::text('preptime', '',['placeholder' => 'Приблизително време за подготовка на ястието.' ])}}
         </div>
-        <div class="form-group">
-            {{Form::label('image','Image')}}
+        <div class="form-group-custom">
+            {{Form::label('image','Изображение')}}
 {{--            {{Form::file('image', '')}}--}}
             <input type="file" class="form-control" name="image" id="image">
         </div>
-        <div class="form-group">
-            {{Form::label('description','Description')}}
-            {{Form::textarea('description', '',['placeholder' => 'Describe the recipe, give a little overview of what to expect ' ])}}
+        <div class="form-group-custom">
+            {{Form::label('description','Описание')}}
+            {{Form::textarea('description', '',['placeholder' => 'Кратко описание на рецептата.' ])}}
         </div>
-        <div class="form-group">
-            {{Form::label('ingredients','Ingredients')}}
-            {{Form::textarea('ingredients', '',['placeholder' => 'The ingredients needed for the recipe, separate them with commas' ])}}
+        <div class="form-group-custom">
+            {{Form::label('ingredients','Съставки')}}
+            {{Form::textarea('ingredients', '',['placeholder' => 'Необходимите съставки' ])}}
         </div>
-        <div class="form-group">
-            {{Form::label('preparation','Preparation')}}
-            {{Form::textarea('preparation', '',['placeholder' => 'The detailed recipe preparation process' ])}}
+        <div class="form-group-custom">
+            {{Form::label('preparation','Приготвяне')}}
+            {{Form::textarea('preparation', '',['placeholder' => 'Детайлно описание на целия процес по приготвянето на ястието.' ])}}
         </div>
         <div class="form-group2">
-            <p>Proofread your recipe, make sure the information is clear and there are no missing ingredients</p>
 {{--            {{Form::submit('Add Recipe', '')}}--}}
-            <button type="submit"> Add Recipe </button>
+            <button type="submit">Добавяне на рецепта</button>
         </div>
         {!! Form::close() !!}
 

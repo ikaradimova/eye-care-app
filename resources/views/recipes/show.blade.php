@@ -1,22 +1,22 @@
 @extends("layouts.app")
 @section("content")
     <section>
-        <h2>{{$recipe->title}}  <span>ready in {{ $recipe->preptime}} </span></h2>
+        <h2>{{$recipe->title}}  <span>готово за {{ $recipe->preptime}} </span></h2>
         <div class="recipeContainer">
             <div>
                 <img class="cover" src="../storage/covers/{{$recipe->cover}}">
             </div>
 
             <div>
-                <p class="title">Ingredients</p>
+                <p class="title">Съставки</p>
                 <p>{{$recipe->ingredients}}</p>
             </div>
             <div>
-                <p class="title">Description</p>
+                <p class="title">Описание</p>
                 <p>{{$recipe->description}}</p>
             </div>
             <div>
-                <p class="title">Preparation</p>
+                <p class="title">Приготвяне</p>
                 <p>{{$recipe->preparation}}</p>
             </div>
             <div>
@@ -26,7 +26,7 @@
 {{--            @if (!Auth::guest())--}}
 {{--                @if (Auth::user()->id == $post->user_id)--}}
                     <div>
-                        <p><a class="editPost" href="/recipes/{{$recipe->id}}/edit">Edit this post</a></p>
+                        <p><a class="editPost" href="/recipes/{{$recipe->id}}/edit">Редактиране на рецепта</a></p>
                     </div>
 {{--                @endif--}}
 {{--            @endif--}}
