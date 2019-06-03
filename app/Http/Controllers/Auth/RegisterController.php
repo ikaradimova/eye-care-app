@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Role;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -63,10 +64,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+//        echo '<pre>';
+//        var_dump($data);die;
+        $role_regular_user = Role::where('name', 'User')->first();
+        $role_medical_user = Role::where('name', 'Medical user')->first();
+        $user = new User();
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->password = bcrypt($data['password']);
+        $user->save();
+        if($data['user-type'] === 'regular-user'){
+            $user->roles()->attach($role_regular_user);
+        } else if ($data['user-type'] === 'medical-user'){
+            $user->roles()->attach($role_medical_user);
+        }
+
+        return $user;
+
+//        return User::create([
+//            'name' => $data['name'],
+//            'email' => $data['email'],
+//            'password' => Hash::make($data['password']),
+//        ]);
     }
 }
