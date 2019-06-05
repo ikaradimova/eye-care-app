@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Recipe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RecipesController extends Controller
 {
@@ -14,6 +15,11 @@ class RecipesController extends Controller
      */
     public function index()
     {
+//        $user = auth()->user();
+//        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
+//        $role = DB::table('roles')->where('id', $roleId)->first()->name;
+//        echo '<pre>';
+//        var_dump($role);die;
         $recipes = Recipe::all();
         return view("recipes.index")->with('recipes', $recipes);
     }
