@@ -37,7 +37,8 @@ h2 a{
 
 h2{
   text-align: center;
-  padding-top: 5px
+  padding-top: 5px;
+  font-size: 3rem;
 }
 
 .recipeContainer {
@@ -59,7 +60,7 @@ h2{
 }
 
 .recipeContainer div p {
-  width: 75%;
+  width: 90%;
   margin: 20px auto;
 }
 .eyeDiseases {
@@ -87,4 +88,36 @@ h2{
 }
 .eyeDisease .meta{
   text-align: center;
+}
+.eyeDiseaseContainer {
+  width: 70%;
+  margin:0 auto;
+
+}
+
+.eyeDiseaseContainer .cover {
+  margin:  20px auto;
+  width: 95%;
+  height: 400px;
+  display: block;
+}
+
+.eyeDiseaseContainer div p {
+  width: 90%;
+  margin: 20px auto;
+}
+.eyeDiseaseContainer div :not(:last-child){
+  border-bottom: 1px solid #ddd;
+}
+.eyeDiseaseContainer div{
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+form label{
+  font-size: 1.2rem;
 }

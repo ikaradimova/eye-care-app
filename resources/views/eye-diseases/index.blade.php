@@ -13,7 +13,7 @@
         <main role="main">
             @endif
             <section>
-                <h2>Очни болести</h2>
+                <h2>Очни заболявания</h2>
                 <div class="eyeDiseases">
                     @if(count($eyeDiseases) > 0)
                         @foreach ( $eyeDiseases as $eyeDisease )

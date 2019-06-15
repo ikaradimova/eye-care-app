@@ -28,8 +28,8 @@
         <li class="dashboard"><a href="/home">Начално меню</a></li>
         <li class="write"><a href="/recipes/create">Добави рецепта</a></li>
         <li class="edit"><a href="/recipes">Редактирай рецепта</a></li>
-        <li class="write"><a href="/eye-diseases">Добави заболяване</a></li>
-        <li class="edit"><a href="/eye-diseases/create">Редактирай заболяване</a></li>
+        <li class="write"><a href="/eye-diseases/create">Добави заболяване</a></li>
+        <li class="edit"><a href="/eye-diseases">Редактирай заболяване</a></li>
         <li class="comments"><a href="#">Форум</a></li>
         <li class="users"><a href="#">Потребители</a></li>
     </ul>

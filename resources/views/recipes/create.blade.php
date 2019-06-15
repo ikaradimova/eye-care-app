@@ -1,9 +1,8 @@
 @extends("layouts.app")
 @section("content")
-    {{--@extends('admin-panel')--}}
     <main role="main">
-        <section class="row-">
-            <h2 style="text-align: center; padding-top: 0.5em;">Нова рецепта</h2>
+        <section>
+            <h2>Нова рецепта</h2>
 
             {!! Form::open(['action' => 'RecipesController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group-custom col">

@@ -35,15 +35,28 @@
                 <p class="title">Лечение</p>
                 <p>{{$eyeDisease->treatment}}</p>
             </div>
-            <div>
-                {{--                <p>Recipe by: <strong>{{$recipe->user->name}}</strong></p>--}}
-            </div>
+            @if ($role === 'admin')
+                <div style="margin-top: 10px">
+                    {!! Form::open(["action" => ["EyeDiseasesController@edit", $eyeDisease->id], "method" => "POST", "class" => "edit"]) !!}
+                    {{Form::hidden("_method","GET")}}
+                    <button type="submit" class="btn btn-primary float-left"
+                            style="background: #1eb6a7;
+                                        margin-left: 100px;">
+                        Редактиране на заболяване
+                    </button>
+                    {!! Form::close() !!}
+                    {{--                            <button type="submit"><a class="editPost" href="/recipes/{{$recipe->id}}/edit">Редактиране на рецепта</a></button>--}}
+                    {!! Form::open(["action" => ["EyeDiseasesController@destroy", $eyeDisease->id], "method" => "POST", "class" => "delete"]) !!}
+                    {{Form::hidden("_method","DELETE")}}
+                    <button type="submit"
+                            class="btn btn-primary float-right"
+                            style="background: red; margin-right: 100px;">
+                        Изтриване на заболяване
+                    </button>
+                    {!! Form::close() !!}
+                </div>
+            @endif
 
-            {{--            @if (!Auth::guest())--}}
-            {{--                @if (Auth::user()->id == $post->user_id)--}}
-            <div>
-                <p><a class="editPost" href="/eye-diseases/{{$eyeDisease->id}}/edit">Редактиране</a></p>
-            </div>
             {{--                @endif--}}
             {{--            @endif--}}
 
