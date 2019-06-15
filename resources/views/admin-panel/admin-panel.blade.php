@@ -31,7 +31,7 @@
         <li class="write"><a href="/eye-diseases/create">Добави заболяване</a></li>
         <li class="edit"><a href="/eye-diseases">Редактирай заболяване</a></li>
         <li class="comments"><a href="#">Форум</a></li>
-        <li class="users"><a href="#">Потребители</a></li>
+        <li class="users"><a href="/users">Потребители</a></li>
     </ul>
 </nav>
 

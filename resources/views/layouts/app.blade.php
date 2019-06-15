@@ -25,13 +25,14 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <?php if(strtolower($role) !== 'admin'): ?>
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
-        <?php else: ?>
-        <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+    <?php else: ?>
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
     <?php endif;?>
 
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
