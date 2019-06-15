@@ -39,3 +39,27 @@ h2{
   text-align: center;
   padding-top: 5px
 }
+
+.recipeContainer {
+  width: 70%;
+  margin:0 auto;
+
+}
+
+.recipeContainer .cover {
+  margin:  20px auto;
+  width: 95%;
+  height: 400px;
+  display: block;
+}
+.recipeContainer div :not(:last-child){
+  border-bottom: 1px solid #ddd;
+}
+.recipeContainer div{
+  margin-bottom: 20px;
+}
+
+.recipeContainer div p {
+  width: 75%;
+  margin: 20px auto;
+}
