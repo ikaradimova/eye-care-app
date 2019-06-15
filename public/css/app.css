@@ -15536,7 +15536,7 @@ a.text-dark:focus {
 a{
   color: black;
 }
-#user-deletion-button {
+#user-deletion-button, #user-edit-button{
   background: none;
   color: inherit;
   border: none;
@@ -15546,6 +15546,6 @@ a{
   outline: inherit;
 }
 
-#user-deletion-form{
+#user-deletion-form, #user-edit-form{
   display: inline-block;
 }

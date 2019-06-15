@@ -51,7 +51,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view("users.create");
     }
 
     /**
@@ -84,7 +84,15 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
+//        $role = strtolower(DB::table('roles')->where('id', $roleId)->first()->name);
+        $user->role = $roleId;
+//        if(auth()->user()->id !== $recipe->user_id){
+//            return redirect("/")->with('error', "You are not authorized to perform that action");
+//        }else{
+        return view("users.edit")->with('user', $user);
+//        }
     }
 
     /**
