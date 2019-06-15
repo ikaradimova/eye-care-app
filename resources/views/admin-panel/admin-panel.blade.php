@@ -1,7 +1,25 @@
 <header role="banner">
     <h1>Администраторски панел</h1>
     <ul class="utilities">
-        <li class="logout warn"><a href="">Log Out</a></li>
+        <li class="nav-item dropdown">
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }} <span class="caret"></span>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                      style="display: none;">
+                    @csrf
+                </form>
+            </div>
+        </li>
     </ul>
 </header>
 
@@ -9,7 +27,7 @@
     <ul class="main">
         <li class="dashboard"><a href="/home">Начално меню</a></li>
         <li class="write"><a href="/recipes/create">Добави рецепта</a></li>
-        <li class="edit"><a href="#">Редактирай рецепта</a></li>
+        <li class="edit"><a href="/recipes">Редактирай рецепта</a></li>
         <li class="write"><a href="#">Добави заболяване</a></li>
         <li class="edit"><a href="#">Редактирай заболяване</a></li>
         <li class="comments"><a href="#">Форум</a></li>
@@ -17,7 +35,7 @@
     </ul>
 </nav>
 
-<main role="main">
+{{--<main role="main">--}}
 {{--    <section class="panel important">--}}
 {{--        <h2>Welcome to Your Dashboard </h2>--}}
 {{--        <ul>--}}
@@ -122,4 +140,4 @@
 {{--        </table>--}}
 {{--    </section>--}}
 
-</main>
+{{--</main>--}}

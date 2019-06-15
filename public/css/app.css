@@ -8789,7 +8789,7 @@ button.bg-dark:focus {
 
 .pb-0,
 .py-0 {
-  padding-bottom: 0 !important;
+  /*padding-bottom: 0 !important;*/
 }
 
 .pl-0,
@@ -8875,7 +8875,7 @@ button.bg-dark:focus {
 
 .pt-4,
 .py-4 {
-  padding-top: 1.5rem !important;
+  padding-top: 0 !important;
 }
 
 .pr-4,
@@ -8885,7 +8885,7 @@ button.bg-dark:focus {
 
 .pb-4,
 .py-4 {
-  padding-bottom: 1.5rem !important;
+  padding-bottom: 0 !important;
 }
 
 .pl-4,
