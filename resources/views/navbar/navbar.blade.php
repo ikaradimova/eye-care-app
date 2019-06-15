@@ -23,7 +23,7 @@
                     <a class="nav-link" href="{{ url('/recipes') }}">Рецепти</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Очни болести</a>
+                    <a class="nav-link" href="{{ url('/eye-diseases') }}">Очни болести</a>
                 </li>
                 @auth
                     <li class="nav-item">

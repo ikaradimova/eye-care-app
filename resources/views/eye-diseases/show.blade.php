@@ -1,8 +1,20 @@
 @extends("layouts.app")
 @section("content")
+    <?php $role = 'guest'; ?>
+    @if (Auth::check())
+        <?php
+        //        use Illuminate\Support\Facades\DB;
+        $user = auth()->user();
+        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
+        $role = strtolower(DB::table('roles')->where('id', $roleId)->first()->name);
+        ?>
+    @endif
+    @if ($role === 'admin')
+        <main role="main">
+            @endif
     <section>
         <h2>{{$eyeDisease->title}}</h2>
-        <div class="recipeContainer">
+        <div class="eyeDiseaseContainer">
             <div>
                 <p class="title">Симптоми</p>
                 <p>{{$eyeDisease->symptoms}}</p>
@@ -37,4 +49,7 @@
 
         </div>
     </section>
+            @if (strtolower($role) === 'admin')
+        </main>
+    @endif
 @endsection

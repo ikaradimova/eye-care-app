@@ -43,7 +43,6 @@ h2{
 .recipeContainer {
   width: 70%;
   margin:0 auto;
-
 }
 
 .recipeContainer .cover {
@@ -62,4 +61,30 @@ h2{
 .recipeContainer div p {
   width: 75%;
   margin: 20px auto;
+}
+.eyeDiseases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.eyeDiseases .image .outcover {
+  width: 100%;
+  height:240px;
+}
+.eyeDisease {
+  padding: 10px;
+  border:1px solid #eee;
+  background: white;
+}
+.eyeDisease .image a{
+  color: black;
+  text-decoration: none;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.eyeDisease .meta{
+  text-align: center;
 }
