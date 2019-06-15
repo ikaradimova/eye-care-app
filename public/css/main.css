@@ -17,8 +17,8 @@ a {
 header {
 
     background-size: 100%;
-    background-size: 100%;
-
+    /*background-size: 100%;*/
+    text-align: center;
     height: 320px;
 
 }
