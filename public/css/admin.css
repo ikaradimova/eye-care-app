@@ -1,0 +1,41 @@
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.recipes .image .outcover {
+  width: 100%;
+  height:240px;
+}
+.recipe {
+  padding: 10px;
+  border:1px solid #eee;
+}
+.myrepices-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.myrecipe {
+  padding: 10px;
+  border:1px solid #eee;
+
+}
+.myrecipe img {
+  width: 100%;
+}
+h2 span {
+  color: #ddd;
+}
+
+h2 a{
+  color: #888;
+}
+
+h2{
+  text-align: center;
+  padding-top: 5px
+}

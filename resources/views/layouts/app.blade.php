@@ -30,8 +30,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <?php if(strtolower($role) !== 'admin'): ?>
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
-    <link rel="stylesheet" href="{{asset('css/admin.scss')}}">
+        <?php else: ?>
+        <link rel="stylesheet" href="{{asset('css/admin.css')}}">
     <?php endif;?>
+
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
     {{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">--}}
     {{--    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">--}}

@@ -13,7 +13,7 @@
         <main role="main">
             @endif
             <section>
-                <h2 style="text-align: center; padding: 5px">Рецепти</h2>
+                <h2>Рецепти</h2>
                 <div class="recipes">
                     @if(count($recipes) > 0)
                         @foreach ( $recipes as $recipe )
