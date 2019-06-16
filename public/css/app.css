@@ -15533,19 +15533,4 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-a{
-  color: black;
-}
-#user-deletion-button, #user-edit-button{
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
 
-#user-deletion-form, #user-edit-form{
-  display: inline-block;
-}
