@@ -686,9 +686,10 @@ footer {
     padding: 5px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1.3em;
 }
 
-.dry-eye-quiz{
+.dry-eye-quiz {
     padding: 10px;
     margin-left: 230px;
     border: 1px solid #eee;
@@ -698,15 +699,74 @@ footer {
     text-align: center;
 }
 
-.startButton, .pauseButton, .stopButton, .resetButton{
+.startButton, .pauseButton, .stopButton, .resetButton {
     margin: 0.5em;
     font-size: 1.5em;
 }
 
-.color-vision-pic{
+.color-vision-pic {
     width: 200px;
 }
 
-#astigmatism-pic{
+#astigmatism-pic {
     width: 400px;
+}
+
+.info {
+    position: absolute;
+    float: right;
+    font-size: 2.5em;
+    color: #1eb6a7;
+    /*left: 35em;*/
+    right: 2.5em;
+}
+
+.modal-button {
+    border: 1px solid #1eb6a7;
+    border-radius: 5px;
+    background-color: white;
+    color: #1eb6a7;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+li:before {
+    list-style: none;
+    /*font-family: 'FontAwesome';*/
+    /*content: '\f06e';*/
+    /*margin:0 5px 0 -15px;*/
+}
+
+.fa-eye {
+    padding-right: 5px;
+    color: #1eb6a7;
+}
+
+.modal-title{
+    color: #1eb6a7;
+    font-size: 2em;
+}
+
+.warning-message{
+    margin: 2em;
+}
+
+.modal-open {
+    overflow:hidden;
+    overflow-y:scroll;
+    padding-right:0 !important;
+}
+
+.letter-in-text{
+    font-family: Sans-Serif;
+}
+
+input::placeholder {
+    font-size: 1.3em;
+    text-align: center;
+    vertical-align: middle;
 }
