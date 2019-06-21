@@ -17,7 +17,7 @@
             <div class="recipe">
 
                 <div class="image">
-                    <a href="">
+                    <a href="/contrast-eye">
                         <img class="outcover" src="../covers/contrast-eye-test.png">
                     </a>
                 </div>

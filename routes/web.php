@@ -24,6 +24,7 @@ Route::resource('users', 'UsersController');
 Route::get('users/{id}/block', 'UsersController@block');
 Route::resource('quiz', 'QuizController');
 Route::get('close-eye', 'QuizController@closeEye');
+Route::get('contrast-eye', 'QuizController@contrastEye');
 //Route::post('close-eye', 'QuizController@closeEye');
 //Route::get('/recipes', 'RecipesController@index')->name('recipes');
 //Route::get('/recipes/create', 'RecipesController@create')->name('recipes/create');

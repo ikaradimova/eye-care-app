@@ -89,4 +89,12 @@ class QuizController extends Controller
 //        var_dump('test');
         return view('quiz.close-eye');
     }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function contrastEye(){
+//        var_dump('test');
+        return view('quiz.contrast-eye');
+    }
 }
