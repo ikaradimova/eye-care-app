@@ -28,7 +28,7 @@
             <div class="recipe">
 
                 <div class="image">
-                    <a href="">
+                    <a href="/central-vision">
                         <img class="outcover" src="../covers/central-vision-test.jpg">
                     </a>
                 </div>
@@ -39,7 +39,7 @@
             <div class="recipe">
 
                 <div class="image">
-                    <a href="">
+                    <a href="/dry-eye">
                         <img class="outcover" src="../covers/dry-eye.jpg">
                     </a>
                 </div>
@@ -50,7 +50,7 @@
             <div class="recipe">
 
                 <div class="image">
-                    <a href="">
+                    <a href="/color-vision">
                         <img class="outcover" src="../covers/color-vision-deficiency-test.jpeg">
                     </a>
                 </div>
@@ -61,7 +61,7 @@
             <div class="recipe">
 
                 <div class="image">
-                    <a href="">
+                    <a href="/astigmatism">
                         <img class="outcover" src="../covers/astigmatism-test.gif">
                     </a>
                 </div>

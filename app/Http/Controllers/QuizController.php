@@ -86,7 +86,6 @@ class QuizController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function closeEye(){
-//        var_dump('test');
         return view('quiz.close-eye');
     }
 
@@ -94,7 +93,34 @@ class QuizController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function contrastEye(){
-//        var_dump('test');
         return view('quiz.contrast-eye');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function centralVision(){
+        return view('quiz.central-vision');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function dryEye(){
+        return view('quiz.dry-eye');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function colorVision(){
+        return view('quiz.color-vision');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function astigmatism(){
+        return view('quiz.astigmatism');
     }
 }

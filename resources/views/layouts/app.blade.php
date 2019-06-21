@@ -20,6 +20,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="lib/easytimer/dist/easytimer.min.js"></script>
+    <script>
+        var timerInstance = new easytimer.Timer();
+    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

@@ -36,6 +36,31 @@ $(document).ready(function () {
     $('#content').summernote();
 });
 
+import Timer from 'easytimer.js';
+
+var timer = new Timer();
+$('#chronoExample .startButton').click(function () {
+    timer.start();
+});
+$('#chronoExample .pauseButton').click(function () {
+    timer.pause();
+});
+$('#chronoExample .stopButton').click(function () {
+    timer.stop();
+});
+$('#chronoExample .resetButton').click(function () {
+    timer.reset();
+});
+timer.addEventListener('secondsUpdated', function (e) {
+    $('#chronoExample .values').html(timer.getTimeValues().toString());
+});
+timer.addEventListener('started', function (e) {
+    $('#chronoExample .values').html(timer.getTimeValues().toString());
+});
+timer.addEventListener('reset', function (e) {
+    $('#chronoExample .values').html(timer.getTimeValues().toString());
+});
+
 // $(document).ready(function () {
 //     if (window.location.pathname === '/close-eye') {
 //         console.log($('#close-eye-e'));

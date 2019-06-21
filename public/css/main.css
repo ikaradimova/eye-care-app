@@ -635,31 +635,78 @@ footer {
     transform: translateY(-50%);
 }
 
-#close-eye-e{
+#close-eye-e {
     position: absolute;
-    top: 45%;
-    left: 46.5%;
+    top: 44.5%;
+    left: 47%;
     transform: rotate(0deg);
 }
 
-#letter-e{
+#letter-e {
     font-family: Sans-Serif;
     font-size: 3em;
     font-weight: bold;
     padding-bottom: 1em;
 }
 
-#contrast-eye-c{
+#contrast-eye-c {
     position: absolute;
     top: 43.5%;
     left: 48%;
     transform: rotate(0deg);
 }
 
-#letter-c{
+#letter-c {
     font-family: Sans-Serif;
     font-size: 3em;
     font-weight: bold;
     opacity: 1;
     padding-bottom: 1em;
+}
+
+.central-vision-quiz {
+    padding: 10px;
+    margin-left: 230px;
+    /*margin-right: 100px;*/
+    border: 1px solid #eee;
+    width: 60%;
+    height: 500px;
+    position: relative;
+    text-align: center;
+}
+
+#central-vision-pic {
+    width: 550px;
+}
+
+.central-vision-button {
+    border: 1px solid #eee;
+    background-color: white;
+    color: black;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dry-eye-quiz{
+    padding: 10px;
+    margin-left: 230px;
+    border: 1px solid #eee;
+    width: 60%;
+    height: 300px;
+    position: relative;
+    text-align: center;
+}
+
+.startButton, .pauseButton, .stopButton, .resetButton{
+    margin: 0.5em;
+    font-size: 1.5em;
+}
+
+.color-vision-pic{
+    width: 200px;
+}
+
+#astigmatism-pic{
+    width: 400px;
 }

@@ -26,6 +26,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.9.0",
         "codemirror": "^5.47.0",
+        "easytimer.js": "^3.2.0",
         "summernote": "^0.8.12"
     }
 }
