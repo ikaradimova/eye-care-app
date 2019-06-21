@@ -1,4 +1,4 @@
-body{
+body {
     /*background: #222;*/
     color: #fff;
     font-family: Abel;
@@ -10,6 +10,7 @@ body{
 body * {
     transition: all 500ms ease-in-out;
 }
+
 a {
     text-decoration: none;
 }
@@ -22,6 +23,7 @@ header {
     height: 320px;
 
 }
+
 header h1 {
     font-size: 4rem;
     color: #fff;
@@ -36,6 +38,7 @@ header p {
     text-align: center;
 
 }
+
 .container {
     /*width: 90%;*/
     /*background: #222;*/
@@ -47,6 +50,7 @@ header p {
     /*position: relative;*/
 
 }
+
 nav {
     /*padding: 10px 0;*/
     /*margin: 0;*/
@@ -68,7 +72,7 @@ nav ul li {
 }
 
 
-nav ul li a{
+nav ul li a {
     /*font-size: 1rem;*/
     /*color: #fff;*/
     /*font-weight: bold;*/
@@ -86,9 +90,9 @@ main section {
     width: 90%;
     margin: 0 auto;
     padding: 10px;
-    -webkit-box-shadow: 0px 10px 34px -9px rgba(0,0,0,0.61);
-    -moz-box-shadow: 0px 10px 34px -9px rgba(0,0,0,0.61);
-    box-shadow: 0px 10px 34px -9px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 0px 10px 34px -9px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: 0px 10px 34px -9px rgba(0, 0, 0, 0.61);
+    box-shadow: 0px 10px 34px -9px rgba(0, 0, 0, 0.61);
     margin-top: -30px;
     background: #fff;
 
@@ -108,8 +112,8 @@ main form {
 
 
 .form-group textarea {
-    resize:none;
-    border:none;
+    resize: none;
+    border: none;
 
 }
 
@@ -126,7 +130,7 @@ main form {
     margin-bottom: 10px;
 }
 
-.form-group2{
+.form-group2 {
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
     display: grid;
@@ -149,11 +153,11 @@ main form {
 }
 
 .form-group-custom input {
-    border:none;
+    border: none;
 
 }
 
-.form-group2 input[type="submit"]{
+.form-group2 input[type="submit"] {
     background: rgb(0, 255, 170);
     border: none;
     font-weight: bold;
@@ -162,15 +166,17 @@ main form {
 
 
 }
+
 .form-group2 a {
     color: #333;
     text-decoration: underline;
 }
+
 .error, .success, .panel-body {
     position: fixed;
-    -webkit-box-shadow: 0px 10px 62px -9px rgba(0,0,0,0.84);
-    -moz-box-shadow: 0px 10px 62px -9px rgba(0,0,0,0.84);
-    box-shadow: 0px 10px 62px -9px rgba(0,0,0,0.84);
+    -webkit-box-shadow: 0px 10px 62px -9px rgba(0, 0, 0, 0.84);
+    -moz-box-shadow: 0px 10px 62px -9px rgba(0, 0, 0, 0.84);
+    box-shadow: 0px 10px 62px -9px rgba(0, 0, 0, 0.84);
     color: orangered;
     padding: 20px;
     right: 0;
@@ -199,22 +205,26 @@ main form {
 
 .recipes .image .outcover {
     width: 100%;
-    height:240px;
+    height: 240px;
 }
+
 .recipe {
     padding: 10px;
-    border:1px solid #eee;
+    border: 1px solid #eee;
 }
-.myrepices-container{
+
+.myrepices-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
 }
+
 .myrecipe {
     padding: 10px;
-    border:1px solid #eee;
+    border: 1px solid #eee;
 
 }
+
 .myrecipe img {
     width: 100%;
 }
@@ -222,21 +232,24 @@ main form {
 h2 span {
     color: #ddd;
 }
-h2 a{
+
+h2 a {
     color: #888;
 }
+
 .recipeContainer {
     width: 70%;
-    margin:0 auto;
+    margin: 0 auto;
 
 }
 
 .recipeContainer .cover {
-    margin:  20px auto;
+    margin: 20px auto;
     width: 95%;
     height: 400px;
     display: block;
 }
+
 .recipeContainer div {
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
@@ -256,7 +269,8 @@ h2 a{
 .username {
     color: rgb(9, 253, 70);
 }
-section.edit form input[type="submit"]{
+
+section.edit form input[type="submit"] {
     background: rgb(231, 107, 6);
     color: #fff;
 }
@@ -267,100 +281,113 @@ section.edit form .form-edit-meta {
 }
 
 
-form.delete{
+form.delete {
     text-align: right
 
 }
 
-section.home{
+section.home {
     position: relative;
     width: 80%;
 }
+
 .avatar {
     width: 250px;
     height: 250px;
     margin: 0px auto 0px auto;
     display: block;
     position: absolute;
-    border:4px solid #eee;
+    border: 4px solid #eee;
     left: 12%;
-    border-radius:100%;
-    -webkit-box-shadow: 0px 10px 62px -9px rgba(0,0,0,0.84);
-    -moz-box-shadow: 0px 10px 62px -9px rgba(0,0,0,0.84);
-    box-shadow: 0px 10px 62px -9px rgba(0,0,0,0.84);
-    background-size:100%;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 10px 62px -9px rgba(0, 0, 0, 0.84);
+    -moz-box-shadow: 0px 10px 62px -9px rgba(0, 0, 0, 0.84);
+    box-shadow: 0px 10px 62px -9px rgba(0, 0, 0, 0.84);
+    background-size: 100%;
     background-position: center;
 }
-.avatarBackground{
+
+.avatarBackground {
     height: 280px;
     padding-top: 10px;
     margin-bottom: 30px;
 
 }
+
 .ribbon {
 
     position: absolute;
-    top:80px;
+    top: 80px;
     left: 50%;
 
 }
+
 .ribbon h3, .ribbon p {
     padding: 0;
     margin: 0;
     font-size: 1.4rem;
 }
-form.delete input[type= "submit"], .editPost{
+
+form.delete input[type= "submit"], .editPost {
     font-size: 1.1rem;
     background: none;
     color: #666;
-    border:none;
+    border: none;
     cursor: pointer;
     border-bottom: 1px solid #666;
 }
+
 footer {
     padding: 20px;
     color: #888;
 }
 
-@media ( min-width:681px) and (max-width:1000px) {
+@media ( min-width: 681px) and (max-width: 1000px) {
 
     .container {
         width: 100%;
 
     }
+
     header {
 
         height: 350px;
 
     }
+
     main section h2 {
         font-size: 2rem;
 
 
     }
+
     h2 a {
         color: #ddd;
     }
 
     .recipes {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
 
     }
-    .myrepices-container{
-        grid-template-columns:repeat(2, 1fr);
+
+    .myrepices-container {
+        grid-template-columns: repeat(2, 1fr);
 
     }
-    .myrepices-container .myrecipe h3{
+
+    .myrepices-container .myrecipe h3 {
         font-size: 1.2rem;
 
     }
+
     .avatar {
         width: 200px;
         top: 18px;
         height: 200px;
         left: 10%;
     }
-    .avatarBackground{
+
+    .avatarBackground {
         height: 240px;
         margin: 10px 0;
         padding: 0;
@@ -368,6 +395,7 @@ footer {
         margin-bottom: 40px;
 
     }
+
     .ribbon {
         padding-bottom: 40px;
         left: 55%;
@@ -375,7 +403,7 @@ footer {
 
 }
 
-@media ( min-width:0px) and (max-width:680px) {
+@media ( min-width: 0px) and (max-width: 680px) {
 
     .container {
         width: 100%;
@@ -488,6 +516,7 @@ footer {
         position: relative;
     }
 }
+
 .eyeDiseases {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -498,21 +527,25 @@ footer {
 
 .eyeDiseases .image .outcover {
     width: 100%;
-    height:240px;
+    height: 240px;
 }
+
 .eyeDisease {
     padding: 10px;
-    border:1px solid #eee;
+    border: 1px solid #eee;
 }
-.eyeDisease .image a{
+
+.eyeDisease .image a {
     color: black;
     text-decoration: none;
     font-size: 1.8rem;
     text-align: center;
 }
-.eyeDisease .meta{
+
+.eyeDisease .meta {
     text-align: center;
 }
+
 /*.myrepices-container{*/
 /*    display: grid;*/
 /*    grid-template-columns: repeat(3, 1fr);*/
@@ -529,16 +562,17 @@ footer {
 
 .eyeDiseaseContainer {
     width: 70%;
-    margin:0 auto;
+    margin: 0 auto;
 
 }
 
 .eyeDiseaseContainer .cover {
-    margin:  20px auto;
+    margin: 20px auto;
     width: 95%;
     height: 400px;
     display: block;
 }
+
 .eyeDiseaseContainer div {
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
@@ -547,4 +581,74 @@ footer {
 .eyeDiseaseContainer div p {
     width: 75%;
     margin: 20px auto;
+}
+
+.close-eye-quiz-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
+
+/*.close-eye-quiz-container .image .outcover {*/
+/*    width: 100%;*/
+/*    height:240px;*/
+/*}*/
+.close-eye-quiz {
+    padding: 10px;
+    margin-left: 230px;
+    /*margin-right: 100px;*/
+    border: 1px solid #eee;
+    width: 60%;
+    height: 500px;
+    position: relative;
+}
+
+#close-eye-arrow-up {
+    position: absolute;
+    left: 50%;
+    top: -0.2em;
+    font-size: 3em;
+    transform: translateX(-50%);
+}
+
+#close-eye-arrow-right {
+    left: 15.4em;
+    position: absolute;
+    top: 50%;
+    font-size: 3em;
+    transform: translateY(-50%);
+}
+
+#close-eye-arrow-down {
+    bottom: -0.2em;
+    position: absolute;
+    left: 50%;
+    font-size: 3em;
+    transform: translateX(-50%);
+}
+
+#close-eye-arrow-left {
+    left: 0.2em;
+    position: absolute;
+    top: 50%;
+    font-size: 3em;
+    transform: translateY(-50%);
+}
+
+#close-eye-e{
+    position: absolute;
+    top: 45%;
+    left: 46.5%;
+    transform: rotate(0deg);
+    /*transform: translate(-50%, -50%);*/
+
+}
+
+#letter{
+    font-family: Sans-Serif;
+    font-size: 3em;
+    font-weight: bold;
+
+    /*padding: 0.62em;*/
+    padding-bottom: 1em;
 }

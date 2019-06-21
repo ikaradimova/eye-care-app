@@ -57077,7 +57077,58 @@ var app = new Vue({
 });
 $(document).ready(function () {
   $('#content').summernote();
-});
+}); // $(document).ready(function () {
+//     if (window.location.pathname === '/close-eye') {
+//         console.log($('#close-eye-e'));
+//         let randomNumber = Math.floor((Math.random() * 4) + 1);
+//             console.log(randomNumber);
+//         let round = 1;
+//         do{
+//             $("button").click(function () {
+//
+//                 buttonClick($(this), randomNumber)
+//             });
+//
+//         } while(round < 6)
+//
+//         // for(let round = 1; round <= 15; i++){
+//         //
+//         //     $("button").click(function () {
+//         //
+//         //         if (($(this).attr('id') === 'close-eye-arrow-right' && randomNumber === 1) ||
+//         //             ($(this).attr('id') === 'close-eye-arrow-down' && randomNumber === 2) ||
+//         //             ($(this).attr('id') === 'close-eye-arrow-lef' && randomNumber === 3) ||
+//         //             ($(this).attr('id') === 'close-eye-arrow-up' && randomNumber === 4)){
+//         //             console.log('right answer');
+//         //         } else {
+//         //             console.log('wrong answer')
+//         //         }
+//         //         console.log($(this).attr('id'));
+//         //         round++;
+//         //     });
+//         // }
+//         // let round = 1;
+//         // do {
+//         //
+//         // } while(round <= 15);
+//
+//
+//         // }
+//     }
+//
+//     function buttonClick(buttonClicked, randomNumber){
+//                 if (($(this).attr('id') === 'close-eye-arrow-right' && randomNumber === 1) ||
+//                     ($(this).attr('id') === 'close-eye-arrow-down' && randomNumber === 2) ||
+//                     ($(this).attr('id') === 'close-eye-arrow-lef' && randomNumber === 3) ||
+//                     ($(this).attr('id') === 'close-eye-arrow-up' && randomNumber === 4)) {
+//                     console.log('right answer');
+//                 } else {
+//                     console.log('wrong answer')
+//                 }
+//                 console.log($(this).attr('id'));
+//                 round++;
+//     }
+// });
 
 /***/ }),
 

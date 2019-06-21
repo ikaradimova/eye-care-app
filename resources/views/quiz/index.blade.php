@@ -6,7 +6,7 @@
             <div class="recipe">
 
                 <div class="image">
-                    <a href="/quiz/close-eye">
+                    <a href="/close-eye">
                         <img class="outcover" src="../covers/close-eye-test.png">
                     </a>
                 </div>

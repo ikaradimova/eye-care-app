@@ -86,7 +86,7 @@ class QuizController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function closeEye(){
-        var_dump('test');
+//        var_dump('test');
         return view('quiz.close-eye');
     }
 }
