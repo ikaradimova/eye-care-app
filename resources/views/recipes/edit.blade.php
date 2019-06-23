@@ -31,7 +31,7 @@
             </div>
             <div class="form-group2 col" style="margin-top: 1em;">
                 <div class="form-edit-meta">
-                    <button type="submit" class="btn btn-primary" style="background: #1eb6a7">Редакция</button>
+                    <button type="submit" class="btn btn-secondary modal-button">Редакция</button>
                 </div>
             </div>
         </section>

@@ -30,7 +30,7 @@
         <li class="edit"><a href="/recipes">Редактирай рецепта</a></li>
         <li class="write"><a href="/eye-diseases/create">Добави заболяване</a></li>
         <li class="edit"><a href="/eye-diseases">Редактирай заболяване</a></li>
-        <li class="comments"><a href="#">Форум</a></li>
+        <li class="comments"><a href="/articles">Форум</a></li>
         <li class="users"><a href="/users">Потребители</a></li>
     </ul>
 </nav>

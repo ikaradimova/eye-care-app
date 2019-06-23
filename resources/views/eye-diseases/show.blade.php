@@ -39,9 +39,8 @@
                 <div style="margin-top: 10px">
                     {!! Form::open(["action" => ["EyeDiseasesController@edit", $eyeDisease->id], "method" => "POST", "class" => "edit"]) !!}
                     {{Form::hidden("_method","GET")}}
-                    <button type="submit" class="btn btn-primary float-left"
-                            style="background: #1eb6a7;
-                                        margin-left: 100px;">
+                    <button type="submit" class="btn btn-secondary modal-button float-left"
+                            style="margin-left: 100px;">
                         Редактиране на заболяване
                     </button>
                     {!! Form::close() !!}
@@ -49,8 +48,8 @@
                     {!! Form::open(["action" => ["EyeDiseasesController@destroy", $eyeDisease->id], "method" => "POST", "class" => "delete"]) !!}
                     {{Form::hidden("_method","DELETE")}}
                     <button type="submit"
-                            class="btn btn-primary float-right"
-                            style="background: red; margin-right: 100px;">
+                            class="btn btn-secondary red-modal-button float-right"
+                            style="margin-right: 100px;">
                         Изтриване на заболяване
                     </button>
                     {!! Form::close() !!}

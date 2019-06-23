@@ -39,8 +39,8 @@
             </table>
             <div class="form-group2 col" style="margin-top: 1em;">
                 <div class="form-edit-meta">
-                    <button class="btn btn-primary" style="background: #1eb6a7;">
-                        <a style="color:white;text-decoration: none;" href="/users/create">Добавяне на потребител</a>
+                    <button class="btn btn-secondary modal-button">
+                        <a style="text-decoration: none;" href="/users/create">Добавяне на потребител</a>
                     </button>
                 </div>
             </div>

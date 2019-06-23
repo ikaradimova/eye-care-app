@@ -121,3 +121,40 @@ h2{
 form label{
   font-size: 1.2rem;
 }
+
+.results{
+  width: 96%;
+}
+
+.modal-button {
+  border: 1px solid #1eb6a7;
+  border-radius: 5px;
+  background-color: white;
+  color: #1eb6a7;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: #1eb6a7;
+}
+
+.red-modal-button {
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: white;
+  color: red;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+#user-edit-button, #user-deletion-button{
+  border: none;
+  background: none;
+  color: #1eb6a7;
+  display:inline-block;
+}
+
+#user-edit-form, #user-deletion-form{
+  display:inline-block;
+}

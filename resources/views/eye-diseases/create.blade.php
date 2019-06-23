@@ -32,7 +32,7 @@
             </div>
             <div class="form-group2 col" style="margin-top: 1em;">
                 {{--            {{Form::submit('Add Recipe', '')}}--}}
-                <button type="submit" class="btn btn-primary" style="background: #1eb6a7">Добавяне</button>
+                <button type="submit" class="btn btn-secondary modal-button">Добавяне</button>
             </div>
             {!! Form::close() !!}
 

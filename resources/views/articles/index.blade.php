@@ -14,10 +14,11 @@
             @endif
             <section>
                 <h2>Форум</h2>
+                @if (strtolower($role) !== 'admin')
                 <a href="/articles/create" class="add-article">
                     Създай нова тема
                 </a>
-{{--                <button type="button" class="btn btn-secondary modal-button" data-dismiss="modal">Разбрах и желая да продължа.</button>--}}
+                @endif
             @if(count($articles) > 0)
 
                     <table class="table table-striped results">
