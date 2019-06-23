@@ -63,6 +63,9 @@
                                   style="display: none;">
                                 @csrf
                             </form>
+
+                            <a class="dropdown-item" href="{{ url('/profile') }}">Профил
+                            </a>
                         </div>
                     </li>
                 @endguest
