@@ -135,6 +135,15 @@ form label{
   cursor: pointer;
 }
 
+/*.modal-button a:hover {*/
+/*  border: 1px solid #1eb6a7;*/
+/*  border-radius: 5px;*/
+/*  background-color: #8edad3;*/
+/*  color: #fff;*/
+/*  !*padding: 5px 20px;*!*/
+/*  cursor: pointer;*/
+/*}*/
+
 h1, h2, h3, h4, h5, h6{
   color: #1eb6a7;
 }

@@ -15,11 +15,11 @@
             <section>
                 <h2>Форум</h2>
                 @if (strtolower($role) !== 'admin')
-                <a href="/articles/create" class="add-article">
-                    Създай нова тема
-                </a>
+                    <a href="/articles/create" class="add-article">
+                        Създай нова тема
+                    </a>
                 @endif
-            @if(count($articles) > 0)
+                @if(count($articles) > 0)
 
                     <table class="table table-striped results">
                         <thead>
@@ -30,6 +30,9 @@
                             <th scope="col">Отговори</th>
                             <th scope="col">Последен отговор</th>
                             <th scope="col">Дата на публикуване</th>
+                            @if (strtolower($role) === 'admin')
+                                <th scope="col">Действия</th>
+                            @endif
                         </tr>
                         </thead>
                         <tbody>
@@ -37,19 +40,24 @@
                             <tr>
                                 <td>1</td>
                                 <td>
-                                    <a href="/articles/{{$article->id}}"><h6 style="margin-top: 10px; margin-bottom: 0">{{$article->title}}</h6></a>
+                                    <a href="/articles/{{$article->id}}"><h6
+                                                style="margin-top: 10px; margin-bottom: 0">{{$article->title}}</h6></a>
                                     <p>
                                         {{str_limit($article->body, 62)}}</p>
                                 </td>
                                 <td>Автор 1</td>
                                 <td>1</td>
                                 <td>
-                                    <a href=""><span style="margin-top: 0; margin-bottom: 0">Отговор 1 на тема 1</span></a>
+                                    <span style="margin-top: 0; margin-bottom: 0">Отговор 1 на тема 1</span>
                                     <br>
                                     <span style="margin-top: 0; margin-bottom: 0"> от </span>
                                     <span style="margin-top: 0; margin-bottom: 0">Коментиращ 1</span>
                                 </td>
                                 <td>{{$article->created_at}}</td>
+                                @if (strtolower($role) === 'admin')
+                                    <td style="text-align: center; color: red"><i class="fas fa-times"
+                                                                                  style="color: red"></i></td>
+                                @endif
                             </tr>
                         @endforeach
                         </tbody>
