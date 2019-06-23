@@ -13,10 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/home') }}">Home</a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="{{ url('/quiz') }}">Тестове</a>
                 </li>
                 <li class="nav-item">
@@ -25,11 +22,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/eye-diseases') }}">Очни болести</a>
                 </li>
-                @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Форум</a>
-                    </li>
-                @endauth
+                @if (Auth::check())
+                    <?php
+                    //        use Illuminate\Support\Facades\DB;
+                    $user = auth()->user();
+                    $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
+                    $role = DB::table('roles')->where('id', $roleId)->first()->name;
+                    ?>
+                    @if($role === 'Medical user')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('articles') }}">Форум</a>
+                        </li>
+                    @endif
+                @endif
+
 
             </ul>
 
@@ -53,19 +59,17 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('/profile') }}">Профил</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                Изход
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                   style="display: none;">
                                 @csrf
                             </form>
-
-                            <a class="dropdown-item" href="{{ url('/profile') }}">Профил
-                            </a>
                         </div>
                     </li>
                 @endguest

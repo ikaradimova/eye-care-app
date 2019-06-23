@@ -107,7 +107,7 @@ main section h2 {
 }
 
 main form {
-    padding-top: 60px;
+    /*padding-top: 60px;*/
 }
 
 
@@ -563,7 +563,6 @@ footer {
 .eyeDiseaseContainer {
     width: 70%;
     margin: 0 auto;
-
 }
 
 .eyeDiseaseContainer .cover {
@@ -825,32 +824,38 @@ div {
 
 
 .m-x-auto {
-    margin-right: auto!important;
-    margin-left: auto!important;
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
+
 .img-circle {
     border-radius: 50%;
 }
 
-.carousel-inner>.carousel-item>a>img, .carousel-inner>.carousel-item>img, .img-fluid {
+.carousel-inner > .carousel-item > a > img, .carousel-inner > .carousel-item > img, .img-fluid {
     display: block;
     max-width: 100%;
     height: auto;
 }
+
 img {
     vertical-align: middle;
 }
+
 img {
     border-style: none;
-}main li:before
+}
+
+main li:before
 *, ::after, ::before {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 
 .m-t-2 {
-    margin-top: 1.5rem!important;
+    margin-top: 1.5rem !important;
 }
+
 .h6, h6 {
     font-size: 1rem;
 }
@@ -863,14 +868,17 @@ img {
     color: #1eb6a7;
     /*color: inherit;*/
 }
+
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5rem;
 }
+
 *, ::after, ::before {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
+
 h6 {
     display: block;
     /*font-size: 0.67em;*/
@@ -913,11 +921,11 @@ h6 {
     box-sizing: inherit;
 }
 
-#profile-form{
+#profile-form {
     padding-top: 0;
 }
 
-#profile-form .form-control{
+#profile-form .form-control {
     margin-top: 12px;
 }
 
@@ -926,15 +934,98 @@ h6 {
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff;
 }
-.results td{
+
+.results td {
     padding-top: 0;
     padding-bottom: 0;
 }
-.table-striped>tbody>tr:nth-child(odd)>td,
-.table-striped>tbody>tr:nth-child(odd)>th {
+
+.results{
+    width: 96%;
+}
+
+.results tr:hover{
+    background-color: #d2f0ed;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
     background-color: #e8f7f6;
 }
 
-.test-results{
+.test-results {
     color: #000
+}
+
+.add-article {
+    border: 1px solid #1eb6a7;
+    border-radius: 5px;
+    background-color: white;
+    color: #1eb6a7;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: -9px;
+    margin-right: 23px;
+}
+
+.add-article:hover {
+    text-decoration: none;
+}
+
+.note-editor {
+    position: relative;
+    width: 96%;
+    text-align: center;
+}
+
+#article-create-form {
+    padding-top: 0;
+}
+
+/*#article-create-form .title-field {*/
+/*    padding-left: 1em;*/
+/*    padding-right: 1em;*/
+/*    !*padding: 1em;*!*/
+/*}*/
+
+/*#article-create-form .add-article-field {*/
+/*    padding-left: 1em;*/
+/*    padding-right: 1em;*/
+/*}*/
+
+.title-field{
+    margin-left: 2%;
+    /*margin-right: 1.1em;*/
+    text-align: left;
+    width: 96%;
+}
+/*.add-article-field{*/
+/*    margin: 2em;*/
+/*}*/
+.title-field::placeholder {
+    /*font-size: 1.3em;*/
+    font-size: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.articleContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* adjusting login and register */
+#email, #password, #name, #password-confirm, #user-type-radio{
+    margin-top: 13px;
+}
+
+.btn-link{
+    color: #1eb6a7;
+}
+
+body{
+    background: white;
 }

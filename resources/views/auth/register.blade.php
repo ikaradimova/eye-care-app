@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Регистрация</div>
+                    <div class="card-header" style="color: #1eb6a7">Регистрация</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
@@ -73,7 +73,7 @@
                                 <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Тип
                                     потребител</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="user-type-radio">
                                     <input type="radio" name="user-type" value="medical-user">Медицинско лице<br>
                                     <input type="radio" name="user-type" value="regular-user" checked>Немедицинско лице<br>
                                 </div>
@@ -86,7 +86,7 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-secondary modal-button">
                                         Регистрация
                                     </button>
                                 </div>

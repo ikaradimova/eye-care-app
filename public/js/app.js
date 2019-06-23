@@ -58186,6 +58186,12 @@ timer.addEventListener('started', function (e) {
 });
 timer.addEventListener('reset', function (e) {
   $('#chronoExample .values').html(timer.getTimeValues().toString());
+});
+$('#summernote').summernote({
+  placeholder: 'Описание',
+  tabsize: 2,
+  height: 400 // width: 900
+
 }); // $(document).ready(function () {
 //     if (window.location.pathname === '/close-eye') {
 //         console.log($('#close-eye-e'));

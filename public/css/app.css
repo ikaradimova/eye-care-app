@@ -4557,7 +4557,7 @@ footer[role=contentinfo] {
 
 a {
   text-decoration: none;
-  color: inherit;
+  /*color: inherit;*/
 }
 
 h2,
@@ -5042,7 +5042,7 @@ sup {
 }
 
 a {
-  /*color: #3490dc;*/
+  color: #1eb6a7;
   text-decoration: none;
   background-color: transparent;
 }
@@ -9137,6 +9137,7 @@ input[type=button].btn-block {
 }
 
 .nav-link {
+  color: black;
   display: block;
   padding: 0.5rem 1rem;
 }
@@ -15534,3 +15535,6 @@ a.text-dark:focus {
   }
 }
 
+#app{
+  background: white;
+}

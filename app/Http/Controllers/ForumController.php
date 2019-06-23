@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
 use Illuminate\Http\Request;
 
-class ArticlesController extends Controller
+class ForumController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,13 +13,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        // Get articles
-//        $articles = Article::paginate(15);
-        // Return collection of articles as a resource
-        $articles = Article::all();
-//        return view("eye-diseases.index")->with('eyeDiseases', $eyeDiseases);
-        return view('articles.index')->with('articles', $articles);
-//        return ArticleResource::collection($articles);
+        return view('articles.index');
     }
 
     /**
@@ -30,7 +23,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        return view("articles.create");
     }
 
     /**
@@ -41,13 +34,7 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        $article = $request->isMethod('put') ? Article::findOrFail($request->article_id) : new Article;
-        $article->id = $request->input('article_id');
-        $article->title = $request->input('title');
-        $article->body = $request->input('body');
-        if($article->save()) {
-            return new ArticleResource($article);
-        }
+        //
     }
 
     /**
@@ -58,12 +45,7 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        // Get article
-//        $article = Article::findOrFail($id);
-//        // Return single article as a resource
-//        return new ArticleResource($article);
-        $article = Article::find($id); //get the post using the ID
-        return view("articles.show")->with('article', $article); //return a view with the post data
+        //
     }
 
     /**

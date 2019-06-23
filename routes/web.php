@@ -30,6 +30,7 @@ Route::get('dry-eye', 'QuizController@dryEye');
 Route::get('color-vision', 'QuizController@colorVision');
 Route::get('astigmatism', 'QuizController@astigmatism');
 Route::resource('profile', 'ProfileController');
+Route::resource('articles', 'ArticlesController');
 //Route::post('close-eye', 'QuizController@closeEye');
 //Route::get('/recipes', 'RecipesController@index')->name('recipes');
 //Route::get('/recipes/create', 'RecipesController@create')->name('recipes/create');
