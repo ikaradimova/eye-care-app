@@ -5,23 +5,25 @@
         <h2>Добавяне на тема</h2>
 
         {!! Form::open([
-            'action' => 'EyeDiseasesController@store',
+            'action' => 'ArticlesController@store',
             'method' => 'POST',
             'enctype' => 'multipart/form-data',
             'id' => 'article-create-form'
            ]) !!}
         <div>
-{{--            <label>Заглавие</label>--}}
-            <input type="text" placeholder="Заглавие" class="title-field">
-{{--            {{Form::label('title','Заглавие')}}--}}
-{{--            {{Form::text('title', '',['placeholder' => 'Заглавие' ])}}--}}
+            {{--            <label>Заглавие</label>--}}
+            <input type="text" placeholder="Заглавие" class="title-field" name="title">
+            {{--            {{Form::label('title','Заглавие')}}--}}
+            {{--            {{Form::text('title', '',['placeholder' => 'Заглавие' ])}}--}}
         </div>
         <div class="add-article-field">
-{{--            {{Form::label('body','Описание')}}--}}
+            {{--            {{Form::label('body','Описание')}}--}}
             {{--                <br>--}}
             {{--                {{Form::text('symptoms', '',['placeholder' => 'Симптоми на болестта.' ])}}--}}
         </div>
-        <div id="summernote"></div>
+        <textarea id="summernote" name="body">
+					</textarea>
+        {{--        <div id="summernote" name="body"></div>--}}
 
         <div class="form-group2 col" style="margin-top: 1em;">
             {{--            {{Form::submit('Add Recipe', '')}}--}}

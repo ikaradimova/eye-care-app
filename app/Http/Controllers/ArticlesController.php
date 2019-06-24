@@ -41,13 +41,23 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        $article = $request->isMethod('put') ? Article::findOrFail($request->article_id) : new Article;
+//        $article = $request->isMethod('put') ? Article::findOrFail($request->article_id) : new Article;
+        $article = new Article();
+        $user = auth()->user();
+//        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
+//        $role = DB::table('roles')->where('id', $roleId)->first()->name;
+//        echo '<pre>';
+//        var_dump($user->id);
+//        var_dump($request->input('title'));
+//        var_dump($request->input('body'));die;
         $article->id = $request->input('article_id');
         $article->title = $request->input('title');
         $article->body = $request->input('body');
-        if($article->save()) {
-            return new ArticleResource($article);
-        }
+        $article->user_id = $user->id;
+        echo '<pre>';
+//        var_dump($article);die;
+        $article->save();
+        return redirect("/articles.index");
     }
 
     /**
