@@ -4557,7 +4557,7 @@ footer[role=contentinfo] {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #1eb6a7;
 }
 
 h2,
@@ -5042,7 +5042,7 @@ sup {
 }
 
 a {
-  color: #3490dc;
+  /*color: #3490dc;*/
   text-decoration: none;
   background-color: transparent;
 }

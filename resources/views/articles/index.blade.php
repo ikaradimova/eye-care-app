@@ -38,20 +38,22 @@
                         <tbody>
                         @foreach ( $articles as $article )
                             <tr>
-                                <td>1</td>
+                                <td>{{$article->id}}</td>
                                 <td>
                                     <a href="/articles/{{$article->id}}"><h6
                                                 style="margin-top: 10px; margin-bottom: 0">{{$article->title}}</h6></a>
                                     <p>
-                                        {{str_limit($article->body, 62)}}</p>
+{{--                                        {{str_limit($article->body, 62)}}</p>--}}
                                 </td>
-                                <td>Автор 1</td>
-                                <td>1</td>
+                                <td>{{$article->author}}</td>
+                                <td>{{$article->comments_count}}</td>
                                 <td>
-                                    <span style="margin-top: 0; margin-bottom: 0">Отговор 1 на тема 1</span>
-                                    <br>
-                                    <span style="margin-top: 0; margin-bottom: 0"> от </span>
-                                    <span style="margin-top: 0; margin-bottom: 0">Коментиращ 1</span>
+                                @if ($article->comments_count > 0)
+                                        <span style="margin-top: 0; margin-bottom: 0">{{$article->comment_last['body']}}</span>
+                                        <br>
+                                        <span style="margin-top: 0; margin-bottom: 0"> от </span>
+                                        <span style="margin-top: 0; margin-bottom: 0">{{$article->comment_last_author}}</span>
+                                @endif
                                 </td>
                                 <td>{{$article->created_at}}</td>
                                 @if (strtolower($role) === 'admin')

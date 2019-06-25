@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = auth()->user();
+        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
+        $role = DB::table('roles')->where('id', $roleId)->first()->name;
+        if(strtolower($role) === 'admin'){
+            return redirect("/users");
+        } else {
+            return redirect("/quiz");
+        }
     }
 }

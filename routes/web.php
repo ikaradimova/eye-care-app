@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('quiz.index');
 });
 
 Auth::routes();
@@ -31,6 +31,7 @@ Route::get('color-vision', 'QuizController@colorVision');
 Route::get('astigmatism', 'QuizController@astigmatism');
 Route::resource('profile', 'ProfileController');
 Route::resource('articles', 'ArticlesController');
+Route::post('store-comment/{id}', 'ArticlesController@storeComment');
 //Route::post('close-eye', 'QuizController@closeEye');
 //Route::get('/recipes', 'RecipesController@index')->name('recipes');
 //Route::get('/recipes/create', 'RecipesController@create')->name('recipes/create');
