@@ -4595,7 +4595,7 @@ main li {
 }
 
 main li:before {
-  content: "";
+  /*content: "";*/
   position: absolute;
   width: 0;
   height: 0;
