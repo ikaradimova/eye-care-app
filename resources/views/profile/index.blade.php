@@ -23,12 +23,12 @@
                                         <input class="form-control" type="text" value="Jane">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Фамилия</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="text" value="Bishop">
-                                    </div>
-                                </div>
+{{--                                <div class="form-group row">--}}
+{{--                                    <label class="col-lg-3 col-form-label form-control-label">Фамилия</label>--}}
+{{--                                    <div class="col-lg-9">--}}
+{{--                                        <input class="form-control" type="text" value="Bishop">--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Имейл</label>
                                     <div class="col-lg-9">
@@ -53,12 +53,12 @@
                                         <input class="form-control" type="text" value="" placeholder="">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Username</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="text" value="janeuser">
-                                    </div>
-                                </div>
+    {{--                                <div class="form-group row">--}}
+    {{--                                    <label class="col-lg-3 col-form-label form-control-label">Username</label>--}}
+    {{--                                    <div class="col-lg-9">--}}
+    {{--                                        <input class="form-control" type="text" value="janeuser">--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Password</label>
                                     <div class="col-lg-9">
@@ -172,7 +172,7 @@
                                 <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Добър</td>
+                                    <td>Лош</td>
                                     <td>23-06-2019</td>
                                 </tr>
                                 </tbody>

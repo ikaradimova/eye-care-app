@@ -848,6 +848,7 @@ img {
 
 main li:before
 *, ::after, ::before {
+    content: none;
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }

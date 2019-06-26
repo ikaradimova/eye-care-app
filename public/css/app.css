@@ -4435,13 +4435,6 @@ header[role=banner] h1 {
   padding: 1rem;
 }
 
-header[role=banner] h1:before {
-  content: "\F248";
-  font-family: FontAwesome;
-  padding-right: 0.6em;
-  color: turquoise;
-}
-
 header[role=banner] .utilities {
   width: 100%;
   background: slategray;
@@ -4557,7 +4550,7 @@ footer[role=contentinfo] {
 
 a {
   text-decoration: none;
-  color: #1eb6a7;
+  color: inherit;
 }
 
 h2,
@@ -4595,7 +4588,6 @@ main li {
 }
 
 main li:before {
-  /*content: "";*/
   position: absolute;
   width: 0;
   height: 0;
@@ -5042,7 +5034,7 @@ sup {
 }
 
 a {
-  /*color: #3490dc;*/
+  color: #3490dc;
   text-decoration: none;
   background-color: transparent;
 }
