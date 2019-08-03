@@ -20,7 +20,7 @@
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Име</label>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="text" value="Jane">
+                                        <input class="form-control" type="text" value="RegUser">
                                     </div>
                                 </div>
 {{--                                <div class="form-group row">--}}
@@ -32,7 +32,7 @@
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Имейл</label>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="email" value="email@gmail.com">
+                                        <input class="form-control" type="email" value="RegUser@example.com">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -60,21 +60,21 @@
     {{--                                    </div>--}}
     {{--                                </div>--}}
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Password</label>
+                                    <label class="col-lg-3 col-form-label form-control-label">Парола</label>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="password" value="11111122333">
+                                        <input class="form-control" type="password" value="RegUser">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Confirm password</label>
+                                    <label class="col-lg-3 col-form-label form-control-label">Потвърди парола</label>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="password" value="11111122333">
+                                        <input class="form-control" type="password" value="RegUser">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label"></label>
                                     <div class="col-lg-9">
-                                        <input type="button" class="btn btn-secondary modal-button" value="Save Changes">
+                                        <input type="button" class="btn btn-secondary modal-button" value="Запази промените">
                                     </div>
                                 </div>
                             </form>
