@@ -17,19 +17,19 @@ class UserTableSeeder extends Seeder
         $role_medical_user = Role::where('name', 'Medical user')->first();
         $role_admin = Role::where('name', 'Admin')->first();
 
-        $user = new User();
-        $user->name = 'RegUser';
-        $user->email = 'regUser@example.com';
-        $user->password = bcrypt('RegUser');
-        $user->save();
-        $user->roles()->attach($role_regular_user);
-
         $admin = new User();
         $admin->name = 'Admin';
         $admin->email = 'admin@example.com';
         $admin->password = bcrypt('admin');
         $admin->save();
         $admin->roles()->attach($role_admin);
+
+        $user = new User();
+        $user->name = 'RegUser';
+        $user->email = 'regUser@example.com';
+        $user->password = bcrypt('RegUser');
+        $user->save();
+        $user->roles()->attach($role_regular_user);
 
         $medicalUser = new User();
         $medicalUser->name = 'MedicalUser';

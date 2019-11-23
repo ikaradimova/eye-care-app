@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee22e09d-d5ab-442d-880e-ca14ca29e9df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/eye-care-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/eye-care-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2019_05_25_144417_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_25_144417_create_roles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2019_05_25_150526_create_role_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_25_150526_create_role_user_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2019_05_29_190449_create_recipes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_29_190449_create_recipes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2019_06_04_180228_create_eye_diseases_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_04_180228_create_eye_diseases_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2019_06_05_173313_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_05_173313_create_articles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_25_161132_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_25_161132_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ArticlesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ArticlesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +213,9 @@
       <workItem from="1574199767848" duration="780000" />
       <workItem from="1574229503666" duration="2219000" />
       <workItem from="1574313773813" duration="5610000" />
-      <workItem from="1574401875181" duration="714000" />
+      <workItem from="1574401875181" duration="1344000" />
+      <workItem from="1574500281994" duration="1746000" />
+      <workItem from="1574524865256" duration="1934000" />
     </task>
     <servers />
   </component>
