@@ -3,7 +3,7 @@
     <main role="main">
         <section class="edit">
             <h2>Редактиране на: <span> {{$recipe->title}} </span></h2>
-            {!! Form::open(['action' => ['RecipesController@update', $recipe->id ], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+            {!! Form::open(['action' => ['RecipesController@update', $recipe->id ], 'method' => 'PUT', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group-custom col">
                 {{Form::label('title','Заглавие')}}
                 {{Form::text('title',  $recipe->title ,['placeholder' => 'This is the recipe name' ])}}

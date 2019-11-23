@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\EyeDisease;
 use App\Recipe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EyeDiseasesController extends Controller
 {
@@ -34,6 +35,7 @@ class EyeDiseasesController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request)
     {
@@ -137,7 +139,14 @@ class EyeDiseasesController extends Controller
     {
         $eyeDisease = EyeDisease::find($id);
 
-        if(auth()->user()->id !== $eyeDisease->user_id){
+        $role = DB::table('role_user')
+            ->select('roles.name')
+            ->join('roles', 'role_user.role_id', '=', 'roles.id')
+            ->where(['role_user.user_id' => auth()->user()->id])
+            ->get()
+            ->first();
+
+        if(strtolower($role->name) !== 'admin'){
             return redirect("/")->with('error', "You are not authorized to perform that action");
         }else{
 //            $fileToDelete = $recipe->cover;

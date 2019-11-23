@@ -166,7 +166,14 @@ class RecipesController extends Controller
     {
         $recipe = Recipe::find($id);
 
-        if(auth()->user()->id !== $recipe->user_id){
+        $role = DB::table('role_user')
+            ->select('roles.name')
+            ->join('roles', 'role_user.role_id', '=', 'roles.id')
+            ->where(['role_user.user_id' => auth()->user()->id])
+            ->get()
+            ->first();
+
+        if(strtolower($role->name) !== 'admin'){
             return redirect("/")->with('error', "You are not authorized to perform that action");
         }else{
             $fileToDelete = $recipe->cover;
