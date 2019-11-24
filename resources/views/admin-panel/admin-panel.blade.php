@@ -25,7 +25,7 @@
 
 <nav role="navigation">
     <ul class="main">
-        <li class="dashboard"><a href="/home">Начално меню</a></li>
+        <?php /* <li class="dashboard"><a href="/home">Начално меню</a></li> */?>
         <li class="write"><a href="/recipes/create">Добави рецепта</a></li>
         <li class="edit"><a href="/recipes">Редактирай рецепта</a></li>
         <li class="write"><a href="/eye-diseases/create">Добави заболяване</a></li>

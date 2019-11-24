@@ -1,3 +1,7 @@
+<?php //use Illuminate\Support\Facades\URL;
+//var_dump(Request::url());
+//var_dump(strpos(Request::url(), 'recipes'));
+//die; ?>
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
         {{--                <a class="navbar-brand" href="{{ url('/') }}">--}}
@@ -13,13 +17,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item <?php echo strpos(Request::url(), 'quiz') ? "active" : ""; ?>">
                     <a class="nav-link" href="{{ url('/quiz') }}">Тестове</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php echo strpos(Request::url(), 'recipes') ? "active" : ""; ?>">
                     <a class="nav-link" href="{{ url('/recipes') }}">Рецепти</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php echo strpos(Request::url(), 'eye-diseases') ? "active" : ""; ?>">
                     <a class="nav-link" href="{{ url('/eye-diseases') }}">Очни болести</a>
                 </li>
                 @if (Auth::check())
@@ -30,7 +34,7 @@
                     $role = DB::table('roles')->where('id', $roleId)->first()->name;
                     ?>
                     @if($role === 'Medical user')
-                        <li class="nav-item">
+                        <li class="nav-item <?php echo strpos(Request::url(), 'articles') ? "active" : ""; ?>">
                             <a class="nav-link" href="{{ url('articles') }}">Форум</a>
                         </li>
                     @endif
@@ -43,11 +47,11 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 @guest
-                    <li class="nav-item">
+                    <li class="nav-item <?php echo strpos(Request::url(), 'login') ? "active" : ""; ?>">
                         <a class="nav-link" href="{{ route('login') }}">Логин</a>
                     </li>
                     @if (Route::has('register'))
-                        <li class="nav-item">
+                        <li class="nav-item <?php echo strpos(Request::url(), 'register') ? "active" : ""; ?>">
                             <a class="nav-link" href="{{ route('register') }}">Регистрация</a>
                         </li>
                     @endif
