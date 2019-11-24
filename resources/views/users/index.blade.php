@@ -19,7 +19,7 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->role}}</td>
-                        <td>{{$user->is_blocked === 0 ? 'Активен' : 'Блокиран'}}</td>
+                        <td>{{$user->active === 1 ? 'Активен' : 'Блокиран'}}</td>
                         <td>{{$user->updated_at}}</td>
                         <td>
                             {!! Form::open(["action" => ["UsersController@edit", $user->id], "method" => "POST", "class" => "edit", "id" => "user-edit-form"]) !!}
@@ -37,6 +37,7 @@
                     </tr>
                 @endforeach
             </table>
+            <?php /*
             <div class="form-group2 col" style="margin-top: 1em;">
                 <div class="form-edit-meta">
                     <button class="btn btn-secondary modal-button">
@@ -44,6 +45,7 @@
                     </button>
                 </div>
             </div>
+            */?>
 
         </section>
     </main>

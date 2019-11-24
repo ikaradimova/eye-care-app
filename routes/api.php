@@ -21,3 +21,4 @@ Route::get('articles', 'ArticlesController@index');
 Route::get('article/{id}', 'ArticlesController@show');
 Route::post('article', 'ArticlesController@store');
 Route::put('articles', 'ArticlesController@store');
+Route::resource('recipes', 'RecipesController');

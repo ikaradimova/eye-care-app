@@ -3,7 +3,7 @@
     <main role="main">
         <section class="edit">
             <h2>Редактиране на: <span> {{$user->name}} </span></h2>
-            {!! Form::open(['action' => ['UsersController@update', $user->id ], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+            {!! Form::open(['action' => ['UsersController@update', $user->id ], 'method' => 'PUT', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group-custom col">
                 {{Form::label('name','Име')}}
                 {{Form::text('name',  $user->name ,['placeholder' => 'Име на потребителя' ])}}
@@ -45,17 +45,37 @@
                 </select>
 {{--                {{Form::text('role', $user->role ,['placeholder' => 'Роля на потребителя' ])}}--}}
             </div>
+
             <div class="form-group-custom col">
-                {{Form::label('isBlocked','Състояние')}}
-                <select name="role" id="role">
+                {{Form::label('avatar','Аватар')}}
+                {{Form::text('avatar', $user->avatar ,['placeholder' => 'Аватар на потребителя' ])}}
+            </div>
+
+            <div class="form-group-custom col">
+                {{Form::label('country','Държава')}}
+                {{Form::text('country', $user->country ,['placeholder' => 'Държава на потребителя' ])}}
+            </div>
+
+            <div class="form-group-custom col">
+                {{Form::label('city','Град')}}
+                {{Form::text('city', $user->city ,['placeholder' => 'Град на потребителя' ])}}
+            </div>
+
+            <div class="form-group-custom col">
+                {{Form::label('address','Адрес')}}
+                {{Form::text('address', $user->address ,['placeholder' => 'Адрес на потребителя' ])}}
+            </div>
+            <div class="form-group-custom col">
+                {{Form::label('active','Състояние')}}
+                <select name="active" id="active">
                     <option value="0"
-                            @if((int)$user->is_blocked === 0)
+                            @if((int)$user->active === 0)
                             selected="selected"
                             @endif
                     >Активен
                     </option>
                     <option value="1"
-                            @if((int)$user->is_blocked === 1)
+                            @if((int)$user->active === 1)
                             selected="selected"
                             @endif
                     >Неактивен

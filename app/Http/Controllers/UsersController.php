@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\EyeDisease;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -85,9 +86,9 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
+//        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
 //        $role = strtolower(DB::table('roles')->where('id', $roleId)->first()->name);
-        $user->role = $roleId;
+//        $user->role = $roleId;
 //        if(auth()->user()->id !== $recipe->user_id){
 //            return redirect("/")->with('error', "You are not authorized to perform that action");
 //        }else{
@@ -101,10 +102,46 @@ class UsersController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param int $id
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function update(Request $request, $id)
     {
-        //
+
+//        echo '<pre>';
+//        var_dump($request);die;
+//        $this->validate(
+//            $request, [
+//                'name' => 'required',
+//                'email' => 'required',
+//                'password' => 'required',
+//                'avatar' => '',
+//                'country' => '',
+//                'city' => '',
+//                'address' => '',
+//                'active' => 'required',
+//                'role' => '',
+//            ]
+//        );
+
+
+
+//        dd(Auth::id());
+//        echo '<pre>';
+//        var_dump($request->all());die;
+        $data = $request->all();
+
+        $user = User::find($id);
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->avatar = $data['avatar'];
+        $user->country = $data['country'];
+        $user->city = $data['city'];
+        $user->address = $data['address'];
+        $user->active = $data['active'];
+
+        $user->save();
+        $user->setRole($id, $data['role']);
+        return redirect("/users")->with("success", "User Updated!");
     }
 
     /**
@@ -138,9 +175,11 @@ class UsersController extends Controller
      */
     public function block($id)
     {
-        $isBlocked = DB::table('users')->where('id', $id)->first()->is_blocked;
+        $active = DB::table('users')->where('id', $id)->first()->active;
+//        echo '<pre>';
+//        var_dump($active);die;
         $user = User::find($id);
-        $user->is_blocked = (int)(!(bool)$isBlocked);
+        $user->active = (int)(!(bool)$active);
         $user->save();
         return redirect('users');
 //        return view("users.index")->with('users', $this->users);

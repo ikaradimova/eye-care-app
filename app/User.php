@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
@@ -63,5 +64,11 @@ class User extends Authenticatable
         }
 
         return false;
+    }
+
+    public function setRole($userId, $role){
+        return DB::table('role_user')
+            ->where('user_id', $userId)
+            ->update(['role_id' => $role]);
     }
 }
