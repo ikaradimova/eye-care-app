@@ -3,10 +3,13 @@
     <?php $role = 'guest'; ?>
     @if (Auth::check())
         <?php
-        //        use Illuminate\Support\Facades\DB;
         $user = auth()->user();
-        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
-        $role = DB::table('roles')->where('id', $roleId)->first()->name;
+        $role = DB::table('role_user')
+            ->select('roles.name')
+            ->join('roles', 'role_user.role_id', '=', 'roles.id')
+            ->where(['role_user.user_id' => $user->id])
+            ->get()
+            ->first()->name;
         ?>
     @endif
     @if (strtolower($role) === 'admin')
@@ -49,7 +52,7 @@
                                 <td>{{$article->comments_count}}</td>
                                 <td>
                                 @if ($article->comments_count > 0)
-                                        <span style="margin-top: 0; margin-bottom: 0">{{$article->comment_last['body']}}</span>
+                                        <span style="margin-top: 0; margin-bottom: 0">{{$article->comment_last->body}}</span>
                                         <br>
                                         <span style="margin-top: 0; margin-bottom: 0"> от </span>
                                         <span style="margin-top: 0; margin-bottom: 0">{{$article->comment_last_author}}</span>
@@ -57,8 +60,16 @@
                                 </td>
                                 <td>{{$article->created_at}}</td>
                                 @if (strtolower($role) === 'admin')
-                                    <td style="text-align: center; color: red"><i class="fas fa-times"
-                                                                                  style="color: red"></i></td>
+
+                                    <td style="text-align: center; color: red">
+                                        {!! Form::open(["action" => ["ArticlesController@destroy", $article->id], "method" => "POST", "class" => "delete", "id" => "article-deletion-form"]) !!}
+                                        {{Form::hidden("_method","DELETE")}}
+                                        <button type="submit" id="article-deletion-button">
+                                            <i class="fas fa-times" style="color: red"></i>
+                                        </button>
+                                        {!! Form::close() !!}
+                                    </td>
+
                                 @endif
                             </tr>
                         @endforeach

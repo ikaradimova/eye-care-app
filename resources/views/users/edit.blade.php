@@ -19,7 +19,7 @@
             {{--            </div>--}}
             <div class="form-group-custom col">
                 {{Form::label('password','Парола')}}
-                {{Form::text('password', $user->password ,['placeholder' => 'Парола' ])}}
+                {{Form::text('password', $user->password ,['placeholder' => 'Парола', 'disabled' => 'disabled' ])}}
             </div>
             <div class="form-group-custom col">
                 {{Form::label('role','Роля')}}

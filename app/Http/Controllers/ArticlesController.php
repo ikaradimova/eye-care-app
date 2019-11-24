@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\ArticleComment;
 use App\Comment;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -16,27 +18,24 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        // Get articles
-//        $articles = Article::paginate(15);
-        // Return collection of articles as a resource
         $articles = Article::all();
         foreach ($articles as $article){
             $article->author = DB::table('users')->where('id', $article->user_id)->value('name');
-            $comments = Comment::all()->where('article_id', $article->id);
-            $article->comments_count = count($comments);
-            $article->comment_last = Comment::all()->where('article_id', $article->id)->last();
-            $article->comment_last_author = DB::table('users')->where('id', $article->comment_last['user_id'])->value('name');
-//            foreach ($comments as $comment){
-//                $comment->author = DB::table('users')->where('id', $comment->user_id)->value('name');
-//            }
-//            echo '<pre>';
-//            var_dump($article->comment_last);
-        }
-//        die;
+            $comments = DB::table('comments')
+                ->select('comments.*', 'article_comment.*')
+                ->join('article_comment', 'comments.id', '=', 'article_comment.comment_id')
+                ->where(['article_comment.article_id' => $article->id])
+                ->get();
 
-//        return view("eye-diseases.index")->with('eyeDiseases', $eyeDiseases);
+            $article->comments_count = count($comments);
+            if($article->comments_count > 0){
+                $article->comment_last = $comments->last();
+//                $lastCommentUserId = $comments->last()->user_id;
+                $article->comment_last_author = DB::table('users')->where(['id' => $comments->last()->user_id])->value('name');
+            }
+        }
+
         return view('articles.index')->with('articles', $articles);
-//        return ArticleResource::collection($articles);
     }
 
     /**
@@ -57,21 +56,13 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-//        $article = $request->isMethod('put') ? Article::findOrFail($request->article_id) : new Article;
         $article = new Article();
         $user = auth()->user();
-//        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
-//        $role = DB::table('roles')->where('id', $roleId)->first()->name;
-//        echo '<pre>';
-//        var_dump($user->id);
-//        var_dump($request->input('title'));
-//        var_dump($request->input('body'));die;
         $article->id = $request->input('article_id');
         $article->title = $request->input('title');
         $article->body = $request->input('body');
         $article->user_id = $user->id;
         echo '<pre>';
-//        var_dump($article);die;
         $article->save();
         return redirect("/articles");
     }
@@ -84,19 +75,16 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        // Get article
-//        $article = Article::findOrFail($id);
-//        // Return single article as a resource
-//        return new ArticleResource($article);
-        $article = Article::find($id); //get the post using the ID
+        $article = Article::find($id);
         $article->author = DB::table('users')->where('id', $article->user_id)->value('name');
-//        $comments = DB::table('comments')->where('article_id', $id);
-        $comments = Comment::all()->where('article_id', $id);
+        $comments = DB::table('comments')
+            ->select('comments.*', 'article_comment.*')
+            ->join('article_comment', 'comments.id', '=', 'article_comment.comment_id')
+            ->where(['article_comment.article_id' => $article->id])
+            ->get();
         foreach ($comments as $comment){
             $comment->author = DB::table('users')->where('id', $comment->user_id)->value('name');
         }
-//        echo '<pre>';
-//        var_dump($comments);die;
         return view("articles.show")->with('article', $article)->with('comments', $comments); //return a view with the post data
     }
 
@@ -131,38 +119,25 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $article = Article::find($id);
+
+        $article->delete();
+        return redirect("/articles")->with("success", "Article deleted!");
     }
 
     public function storeComment(Request $request, $articleId)
     {
-//        $article = $request->isMethod('put') ? Article::findOrFail($request->article_id) : new Article;
         $comment = new Comment();
         $user = auth()->user();
-//        $request = new Request;
-        echo '<pre>';
-//        var_dump($id);
-//        var_dump($request->input('comment'));
-//        $comment->id = $request->input('comment_id');
         $comment->body = $request->input('comment');
-        $comment->article_id = $articleId;
         $comment->user_id = $user->id;
         $comment->save();
-//        var_dump($comment);
-//        die;
-//        $roleId = DB::table('role_user')->where('user_id', $user->id)->first()->role_id;
-//        $role = DB::table('roles')->where('id', $roleId)->first()->name;
-//        echo '<pre>';
-//        var_dump($user->id);
-//        var_dump($request->input('title'));
-//        var_dump($request->input('body'));die;
-//        $article->id = $request->input('article_id');
-//        $article->title = $request->input('title');
-//        $article->body = $request->input('body');
-//        $article->user_id = $user->id;
-//        echo '<pre>';
-//        var_dump($article);die;
-//        $article->save();
+
+        $commentId = $comment->id;
+
+        DB::table('article_comment')->insert([
+            ['article_id' => $articleId, 'comment_id' => $commentId],
+        ]);
         return redirect("/articles/{$articleId}");
     }
 }

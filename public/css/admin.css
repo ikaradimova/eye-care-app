@@ -164,6 +164,12 @@ h1, h2, h3, h4, h5, h6{
   display:inline-block;
 }
 
+#article-deletion-button{
+    border: none;
+    background: none;
+    display:inline-block;
+}
+
 #user-edit-form, #user-deletion-form{
   display:inline-block;
 }

@@ -165,7 +165,7 @@ class UsersController extends Controller
 
         $user->delete();
         DB::table('role_user')->where('user_id', '=', $id)->delete();
-        return redirect("/users")->with("success", "User Deleted!");
+        return redirect("/users")->with("success", "User deleted!");
 //        }
     }
 
